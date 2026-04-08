@@ -1,0 +1,208 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "Organization",
+      "@id": "https://www.outsourceaccelerator.com/#organization",
+      "name": "Outsource Accelerator",
+      "url": "https://www.outsourceaccelerator.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.outsourceaccelerator.com/wp-content/uploads/outsource-accelerator-logo.png",
+        "width": 280,
+        "height": 60
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/outsourceaccelerator",
+        "https://www.facebook.com/outsourceaccelerator/",
+        "https://www.instagram.com/outsourceaccel/",
+        "https://podcast.outsourceaccelerator.com/"
+      ],
+      "description": "Outsource Accelerator is the world's leading Business Process Outsourcing (BPO) marketplace and advisory. The trusted, independent resource for businesses of all sizes to explore, initiate, and embed outsourcing into their operations.",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Manila, Philippines"
+      }
+    },
+
+    {
+      "@type": "Person",
+      "@id": "https://www.outsourceaccelerator.com/derek-gallimore/#person",
+      "name": "Derek Gallimore",
+      "url": "https://www.outsourceaccelerator.com/derek-gallimore/",
+      "jobTitle": "Founder & CEO",
+      "worksFor": {
+        "@id": "https://www.outsourceaccelerator.com/#organization"
+      },
+      "description": "Derek Gallimore is the founder and CEO of Outsource Accelerator and a leading global expert on outsourcing and offshoring. He has been based in Manila — the heart of global outsourcing — since 2014.",
+      "sameAs": [
+        "https://derekgallimore.medium.com/",
+        "https://www.linkedin.com/in/derekgallimore/",
+        "https://podcast.outsourceaccelerator.com/"
+      ]
+    },
+
+    {
+      "@type": "WebPage",
+      "@id": "https://www.outsourceaccelerator.com/articles/how-a-usd-300-monthly-salary-supports-decent-living-standards-in-the-philippines/#webpage",
+      "url": "https://www.outsourceaccelerator.com/articles/how-a-usd-300-monthly-salary-supports-decent-living-standards-in-the-philippines/",
+      "name": "How a USD $300 Monthly Salary Supports Decent Living Standards in the Philippines",
+      "isPartOf": { "@id": "https://www.outsourceaccelerator.com/#organization" },
+      "inLanguage": "en-US",
+      "breadcrumb": { "@id": "https://www.outsourceaccelerator.com/articles/how-a-usd-300-monthly-salary-supports-decent-living-standards-in-the-philippines/#breadcrumb" }
+    },
+
+    {
+      "@type": "Article",
+      "@id": "https://www.outsourceaccelerator.com/articles/how-a-usd-300-monthly-salary-supports-decent-living-standards-in-the-philippines/#article",
+      "headline": "How a USD $300 Monthly Salary Supports Decent Living Standards in the Philippines",
+      "description": "A USD $300 monthly salary is considered a good starting salary in the Philippines. Discover how this wage covers housing, food, transport, and other living costs — and why BPO salaries at this level sustain a comfortable lifestyle relative to the local economy.",
+      "url": "https://www.outsourceaccelerator.com/articles/how-a-usd-300-monthly-salary-supports-decent-living-standards-in-the-philippines/",
+      "mainEntityOfPage": {
+        "@id": "https://www.outsourceaccelerator.com/articles/how-a-usd-300-monthly-salary-supports-decent-living-standards-in-the-philippines/#webpage"
+      },
+      "author": {
+        "@id": "https://www.outsourceaccelerator.com/derek-gallimore/#person"
+      },
+      "publisher": {
+        "@id": "https://www.outsourceaccelerator.com/#organization"
+      },
+      "datePublished": "2021-03-15",
+      "dateModified": "2024-06-01",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.outsourceaccelerator.com/wp-content/uploads/usd-300-monthly-salary-philippines.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "articleSection": "Philippines Salaries & BPO",
+      "keywords": [
+        "Philippines salary",
+        "USD 300 monthly salary",
+        "BPO salary Philippines",
+        "cost of living Philippines",
+        "outsourcing Philippines",
+        "Filipino worker salary",
+        "decent living standards Philippines"
+      ],
+      "inLanguage": "en-US",
+      "isAccessibleForFree": true,
+      "about": [
+        { "@id": "https://www.outsourceaccelerator.com/articles/how-a-usd-300-monthly-salary-supports-decent-living-standards-in-the-philippines/#term-bpo" },
+        { "@id": "https://www.outsourceaccelerator.com/articles/how-a-usd-300-monthly-salary-supports-decent-living-standards-in-the-philippines/#term-col" }
+      ]
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.outsourceaccelerator.com/articles/how-a-usd-300-monthly-salary-supports-decent-living-standards-in-the-philippines/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.outsourceaccelerator.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.outsourceaccelerator.com/articles/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How a USD $300 Monthly Salary Supports Decent Living Standards in the Philippines",
+          "item": "https://www.outsourceaccelerator.com/articles/how-a-usd-300-monthly-salary-supports-decent-living-standards-in-the-philippines/"
+        }
+      ]
+    },
+
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.outsourceaccelerator.com/articles/how-a-usd-300-monthly-salary-supports-decent-living-standards-in-the-philippines/#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can you live on $300 a month in the Philippines?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A USD $300 monthly salary supports a decent lifestyle in the Philippines. According to the Philippine Statistics Authority (PSA), a family of five needs a minimum of approximately USD $177 per month to cover basic food and non-food needs, meaning $300 provides meaningful surplus for rent, utilities, transport, and savings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a decent starting salary in the Philippines for BPO workers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The BPO (Business Process Outsourcing) industry in the Philippines typically offers starting salaries of around USD $300 per month (roughly USD $3,600 per year). This is above the national minimum wage and considered a good entry-level salary for someone beginning their career."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the cost of living in the Philippines compare to the United States?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The cost of living in the Philippines is approximately 47% lower than in the United States. Numbeo estimates the overall monthly cost of living in the Philippines at around PHP 26,159 (approximately USD $509) excluding rent, making a USD $300 salary stretch significantly further than it would in Western countries."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the minimum wage in the Philippines?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The minimum wage in the Philippines varies by region. In Metro Manila (NCR), daily minimum wage rates are set by the Regional Tripartite Wages and Productivity Board and are typically in the range of PHP 500–610 per day depending on the sector and year. BPO salaries generally exceed this minimum."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do companies outsource to the Philippines?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Companies outsource to the Philippines because of the country's large pool of English-proficient, college-educated workers, a well-established BPO infrastructure, cultural compatibility with Western businesses, and significantly lower labor costs compared to hiring domestically. A USD $300–$500/month salary in the Philippines equates to a comfortable local lifestyle while saving businesses 60–80% on labor compared to US or UK equivalents."
+          }
+        }
+      ]
+    },
+
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://www.outsourceaccelerator.com/articles/how-a-usd-300-monthly-salary-supports-decent-living-standards-in-the-philippines/#term-bpo",
+      "name": "BPO (Business Process Outsourcing)",
+      "description": "Business Process Outsourcing (BPO) is the practice of contracting specific business functions or processes to a third-party service provider, often in a lower-cost country such as the Philippines. Common BPO services include customer support, accounting, IT, and human resources.",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "Outsource Accelerator Glossary",
+        "url": "https://www.outsourceaccelerator.com/articles/"
+      }
+    },
+
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://www.outsourceaccelerator.com/articles/how-a-usd-300-monthly-salary-supports-decent-living-standards-in-the-philippines/#term-col",
+      "name": "Cost of Living",
+      "description": "The cost of living refers to the amount of money needed to cover basic expenses such as housing, food, transportation, healthcare, and clothing in a specific location. In the Philippines, the cost of living is approximately 47% lower than in the United States, enabling salaries like USD $300/month to sustain a decent standard of living.",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "Outsource Accelerator Glossary",
+        "url": "https://www.outsourceaccelerator.com/articles/"
+      }
+    },
+
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://www.outsourceaccelerator.com/articles/how-a-usd-300-monthly-salary-supports-decent-living-standards-in-the-philippines/#term-offshoring",
+      "name": "Offshoring",
+      "description": "Offshoring is the relocation of a business process or service to another country, typically to reduce costs. Unlike outsourcing (which involves a third party), offshoring may involve a company's own subsidiary abroad. The Philippines is one of the world's top offshoring destinations.",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "Outsource Accelerator Glossary",
+        "url": "https://www.outsourceaccelerator.com/articles/"
+      }
+    }
+
+  ]
+}
+</script>
