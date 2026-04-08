@@ -1,0 +1,256 @@
+/*
+ * A11y & AEO Block Patterns — Shared Stylesheet
+ *
+ * Covers:
+ *  - WCAG 2.1 AA contrast (≥ 4.5:1 for normal text, ≥ 3:1 for large text/UI)
+ *  - Visible focus indicators (WCAG 2.4.7, 2.4.11)
+ *  - Definition Block, TL;DR Summary Box, FAQ Section, Author Block
+ *
+ * Enqueue via wp_enqueue_style() targeting the 'wp-block-library' handle
+ * or your theme stylesheet. For editor styles register with
+ * add_editor_style().
+ *
+ * Color palette used (all pairs tested at ≥ 4.5:1 on their backgrounds):
+ *   #1a1a1a on #ffffff / #f5f5f5  →  ≈ 16:1
+ *   #0073AA on #ffffff            →  ≈  4.6:1  (large text / decorative border)
+ *   #595959 on #ffffff / #f5f5f5  →  ≈  7.0:1
+ *   #ffffff on #0073AA            →  ≈  4.6:1  (used only for 18 px+ text)
+ *
+ * @package A11yAEO\BlockPatterns
+ */
+
+/* ─────────────────────────────────────────────
+   Global focus style (all interactive elements)
+   WCAG 2.4.7 Focus Visible, 2.4.11 Focus Appearance
+   ───────────────────────────────────────────── */
+.a11y-definition-block *:focus-visible,
+.a11y-tldr-box *:focus-visible,
+.a11y-faq-section *:focus-visible,
+.a11y-author-block *:focus-visible {
+	outline: 3px solid #0073AA;
+	outline-offset: 2px;
+	border-radius: 2px;
+}
+
+/* Remove default outline only when our custom one is shown */
+.a11y-definition-block *:focus:not(:focus-visible),
+.a11y-tldr-box *:focus:not(:focus-visible),
+.a11y-faq-section *:focus:not(:focus-visible),
+.a11y-author-block *:focus:not(:focus-visible) {
+	outline: none;
+}
+
+/* ─────────────────────────────────────────────
+   1. Definition Block
+   ───────────────────────────────────────────── */
+.a11y-definition-block {
+	background-color: #f5f5f5;
+	border: 1px solid #767676;
+	border-radius: 4px;
+	padding: 1.5rem;
+	color: #1a1a1a; /* 16:1 on #f5f5f5 */
+}
+
+.a11y-definition-block__heading {
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin-top: 0;
+	color: #1a1a1a;
+}
+
+.a11y-definition-block__body {
+	margin-top: 0.75rem;
+	line-height: 1.6;
+	color: #1a1a1a;
+}
+
+.a11y-definition-block__meta {
+	margin-top: 0.75rem;
+	font-size: 0.875rem;
+	color: #595959; /* 7:1 on #f5f5f5 */
+}
+
+/* ─────────────────────────────────────────────
+   2. TL;DR Summary Box
+   ───────────────────────────────────────────── */
+.a11y-tldr-box {
+	background-color: #f5f5f5;
+	border: 1px solid #767676;
+	border-left: 4px solid #0073AA;
+	border-radius: 4px;
+	padding: 1.5rem;
+	color: #1a1a1a;
+}
+
+.a11y-tldr-box__heading {
+	font-size: 1rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75rem;
+	color: #0073AA; /* 4.6:1 on #f5f5f5 — used at 16 px bold (large text threshold) */
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.a11y-tldr-box__list {
+	margin: 0;
+	padding-left: 1.25rem;
+	color: #1a1a1a;
+	line-height: 1.6;
+}
+
+.a11y-tldr-box__list li + li {
+	margin-top: 0.5rem;
+}
+
+/* ─────────────────────────────────────────────
+   3. FAQ Section
+   ───────────────────────────────────────────── */
+.a11y-faq-section {
+	color: #1a1a1a;
+}
+
+.a11y-faq-section__heading {
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin-bottom: 1.5rem;
+	color: #1a1a1a;
+}
+
+.a11y-faq-section__items {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.a11y-faq-item {
+	border: 1px solid #767676;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+/* Native <details> / <summary> accordion */
+.a11y-faq-item__details {
+	background-color: #ffffff;
+}
+
+.a11y-faq-item__question {
+	display: block; /* full-width click target */
+	padding: 1rem 1.25rem;
+	font-weight: 600;
+	font-size: 1rem;
+	color: #1a1a1a;
+	background-color: #ffffff;
+	cursor: pointer;
+	list-style: none; /* hide default triangle in Firefox */
+	position: relative;
+}
+
+/* Custom expand/collapse indicator (replaces browser default) */
+.a11y-faq-item__question::after {
+	content: '+';
+	position: absolute;
+	right: 1.25rem;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 1.25rem;
+	font-weight: 400;
+	color: #0073AA;
+	line-height: 1;
+	transition: transform 0.2s ease;
+}
+
+.a11y-faq-item__details[open] > .a11y-faq-item__question::after {
+	content: '\2212'; /* minus sign */
+}
+
+/* Remove default triangle in WebKit */
+.a11y-faq-item__question::-webkit-details-marker {
+	display: none;
+}
+
+.a11y-faq-item__answer {
+	padding: 0 1.25rem 1rem;
+	color: #1a1a1a;
+	line-height: 1.6;
+	border-top: 1px solid #d0d0d0;
+}
+
+.a11y-faq-item__answer p {
+	margin-top: 0.75rem;
+	margin-bottom: 0;
+}
+
+/* Focus ring on <summary> */
+.a11y-faq-item__question:focus-visible {
+	outline: 3px solid #0073AA;
+	outline-offset: -3px; /* inset so it stays within the card */
+	border-radius: 3px;
+}
+
+/* ─────────────────────────────────────────────
+   4. Author Block
+   ───────────────────────────────────────────── */
+.a11y-author-block {
+	background-color: #f5f5f5;
+	border: 1px solid #767676;
+	border-radius: 4px;
+	padding: 1.5rem;
+	display: flex;
+	align-items: center;
+	gap: 1.25rem;
+	flex-wrap: wrap;
+	color: #1a1a1a;
+}
+
+.a11y-author-block__avatar {
+	flex-shrink: 0;
+}
+
+.a11y-author-block__avatar-img {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	display: block;
+	object-fit: cover;
+	/* Decorative border — uses 3:1 on white (UI component threshold) */
+	border: 2px solid #767676;
+}
+
+.a11y-author-block__meta {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	min-width: 0; /* prevent overflow in flex */
+}
+
+.a11y-author-block__name {
+	margin: 0;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.a11y-author-block__name-link {
+	color: #0073AA; /* 4.6:1 on #f5f5f5 — 16 px bold qualifies as large text */
+	text-decoration: underline;
+}
+
+.a11y-author-block__name-link:hover {
+	text-decoration: none;
+	color: #005177; /* ~7:1 on #f5f5f5 */
+}
+
+.a11y-author-block__role,
+.a11y-author-block__date {
+	margin: 0;
+	font-size: 0.875rem;
+	color: #595959; /* 7:1 on #f5f5f5 */
+}
+
+/* Responsive — stack on narrow viewports */
+@media (max-width: 480px) {
+	.a11y-author-block {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
