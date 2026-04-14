@@ -108,7 +108,7 @@ Create `/glossary` section using a WordPress Custom Post Type.
 
 ### 4. Related Articles Component (AEO + A11Y)
 
-Reusable component for:
+Updated reusable component for, added time read beside content category (see Figma prototype):
 - Articles  
 - News  
 - Guides  
